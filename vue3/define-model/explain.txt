@@ -1,0 +1,41 @@
+### defineModel
+##### defineModel arguments
+
+// 필수로 설정
+const model = defineModel({ required: true })
+
+// 기본값 설정
+const model = defineModel({ default: 0 })
+
+// 타입 설정
+const model = defineModel({ type: String })
+
+// 로컬 변수로 설정하여 부모로부터 전달되지 않아도 사용할 수 있음.
+const model = defineModel({ local: true })
+
+// 첫 번째 매개변수에 이름, 두번째 매개변수에 설정값을 추가 
+const model = defineModel('model', { required: true })
+
+
+##### Multiple bindings
+
+// 여러 개의 모델 정의
+const firstName = defineModel('firstName')
+const lastName = defineModel('lastName')
+
+
+##### 예제 코드
+<!-- InputBasic.vue -->
+<script setup>
+import { defineModel } from "vue";
+const name = defineModel();
+</script>
+<template>
+  <div class="input-basic-comp">
+      <input type="text" placeholder="이름" v-model="name" />
+  </div>
+</template>
+
+
+##### 참조  
+https://blog.hectodata.co.kr/vue3-define-model/
