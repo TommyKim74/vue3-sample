@@ -7,7 +7,7 @@
 템플릿 문법(`{{ }}`)은 간단히 사용 하면 매우 편리합니다. 하지만 템플릿 표현식 내 코드가 길어질 경우 가독성이 떨어지고 유지보수가 어려워질 수 있습니다. 예를 들어 아래와 같이 객체가 있는경우:
 ```
 const teacher = reactive({
-  name: '짐코딩',
+  name: '김영호',
   lectures: [
     'HTML/CSS',
     'JavaScript',
@@ -111,7 +111,7 @@ import { computed, reactive, ref } from 'vue';
 export default {
 	setup() {
 		const teacher = reactive({
-			name: '짐코딩',
+			name: '김영호',
 			lectures: ['HTML/CSS', 'JavaScript', 'Vue3'],
 		});
 
@@ -143,7 +143,7 @@ export default {
 			},
 		});
 
-		fullName.value = '짐 코딩';
+		fullName.value = '김 영호';
 
 		return { teacher, hasLecture, existLecture, counter, fullName };
 	},
